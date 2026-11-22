@@ -814,8 +814,8 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 [data-theme="swiss"] .contact .btn.ghost{border-color:var(--bg);color:var(--bg)}
 .sw-mail{display:inline-block;font-family:var(--fd);font-weight:800;font-size:clamp(1.4rem,3.6vw,3rem);letter-spacing:-.04em;color:var(--bg);border-bottom:3px solid var(--pink);margin:6px 0 30px;transition:color .2s}
 .sw-mail:hover{color:var(--pink)}
-.sw-foot{padding:40px var(--pad) 30px;border-top:1.5px solid var(--text)}
-.sw-foot-big{font-family:var(--fd);font-weight:900;font-size:clamp(8rem,30vw,28rem);line-height:.78;letter-spacing:-.08em;display:flex;align-items:flex-start;justify-content:space-between}
+.sw-foot{padding:40px var(--pad) 88px;border-top:1.5px solid var(--text)}
+.sw-foot-big{font-family:var(--fd);font-weight:900;font-size:clamp(8rem,30vw,28rem);line-height:.78;letter-spacing:-.03em;display:flex;align-items:flex-start;justify-content:space-between}
 .sw-foot-big>span{font-size:.12em;letter-spacing:-.02em;font-weight:700;margin-top:.4em}
 .sw-foot-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1.5px solid var(--text);padding-top:14px;margin-top:20px;font-size:.84rem;font-weight:500}
 .sw-foot-row a:hover{color:var(--violet)}
@@ -1011,6 +1011,10 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 [data-theme="swiss"] .job{grid-template-rows:auto auto 1fr}
 [data-theme="swiss"] .job .scope{grid-column:2;grid-row:3;align-self:start;margin:14px 0 0;padding-top:10px;border-top:1px solid rgba(10,10,10,.15)}
 @media (max-width:1000px){[data-theme="swiss"] .job{grid-template-rows:none}[data-theme="swiss"] .job .scope{grid-column:1;grid-row:auto;margin:10px 0 12px}}
+.pt-filters .pt-dummy{background:#fef3c7;border-color:#f59e0b;color:#92400e;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.calc-out{position:relative}
+.calc-dummy{position:absolute;top:14px;right:14px;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;background:#fef3c7;border:1.5px solid #f59e0b;color:#92400e;z-index:3}
+@media (max-width:760px){.sw-mail{font-size:clamp(1.05rem,5.6vw,1.6rem)!important;overflow-wrap:anywhere}.sw-fin{position:relative!important;right:auto!important;bottom:auto!important;display:block;margin-top:28px}}
 /* ======== V2: RFM MATRIX ======== */
 .seg-grid[hidden]{display:none!important}
 .phone,.phone .ph-head b{color:#ecebff}
@@ -1019,8 +1023,8 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 .phone .bubble .en{color:#c4c3e6}
 .phone .bubble .lnk{color:#22d3ee}
 @media (max-width:760px){
-  .rc b{font-size:.6rem;letter-spacing:-.01em}
-  .rc b .fl{display:none!important}.rc b .sh{display:inline!important}
+  .rfm-mx .rc b{font-size:.6rem;letter-spacing:-.01em}
+  .rfm-mx .rc b .fl{display:none!important}.rfm-mx .rc b .sh{display:inline!important}
   .rfm-x span:nth-child(2){display:none}
 }
 
@@ -1029,15 +1033,15 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 .rfm-y{position:absolute;left:0;top:0;height:calc(5 * 86px + 16px);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-family:var(--fm);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .rfm-mx{display:grid;grid-template-columns:28px repeat(5,1fr);grid-template-rows:repeat(5,86px) 32px;gap:4px}
 .rfm-ax{display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:800;font-size:1.1rem}
-.rc{font:inherit;text-align:left;border:0;background:var(--bg-c);color:var(--fg-c);padding:8px 9px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;transition:filter .2s,box-shadow .2s,transform .2s;min-width:0}
-.rc:hover{filter:brightness(1.05)}
-.rc b{position:absolute;left:9px;top:7px;right:8px;font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:-.03em;line-height:1.05}
-.rc .rcc{font-family:var(--fm);font-size:.62rem;opacity:.72}
-.rc .cds{font-family:var(--fm);font-size:.72rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rc.hl{box-shadow:inset 0 0 0 3px var(--text)}
-.rc.on{outline:4px solid var(--text);outline-offset:-2px;z-index:2}
-.rc.on::after{content:attr(data-code);position:absolute;right:7px;top:7px;font-family:var(--fm);font-size:.78rem;font-weight:500;background:#fff;color:#0a0a0a;padding:2px 6px}
-.rc.on b{right:56px}
+.rfm-mx .rc{font:inherit;text-align:left;border:0;background:var(--bg-c);color:var(--fg-c);padding:8px 9px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;transition:filter .2s,box-shadow .2s,transform .2s;min-width:0}
+.rfm-mx .rc:hover{filter:brightness(1.05)}
+.rfm-mx .rc b{position:absolute;left:9px;top:7px;right:8px;font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:-.03em;line-height:1.05}
+.rfm-mx .rc .rcc{font-family:var(--fm);font-size:.62rem;opacity:.72}
+.rfm-mx .rc .cds{font-family:var(--fm);font-size:.72rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rfm-mx .rc.hl{box-shadow:inset 0 0 0 3px var(--text)}
+.rfm-mx .rc.on{outline:4px solid var(--text);outline-offset:-2px;z-index:2}
+.rfm-mx .rc.on::after{content:attr(data-code);position:absolute;right:7px;top:7px;font-family:var(--fm);font-size:.78rem;font-weight:500;background:#fff;color:#0a0a0a;padding:2px 6px}
+.rfm-mx .rc.on b{right:56px}
 .rfm-x{display:flex;justify-content:space-between;margin:8px 0 0 32px;font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .rfm-offs{margin:22px 0 0 32px;border-top:1.5px solid var(--text);padding-top:12px}
 .rfm-offs h5{font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:10px}
@@ -1051,7 +1055,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 .rfm-card{border:1.5px solid var(--text);background:var(--card);width:100%;max-width:340px;margin-bottom:22px;color:var(--text)}
 .rfm-card.flash{animation:flash .5s}
 .rfm-card-h{padding:12px 14px;background:var(--hc,#00875a);color:var(--hf,#fff);transition:background .3s,color .3s}
-.rc b .sh{display:none}
+.rfm-mx .rc b .sh{display:none}
 .rfm-card-h small{font-family:var(--fm);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
 .rfm-card-h b{display:block;font-family:var(--fd);font-weight:800;font-size:1.6rem;letter-spacing:-.04em;line-height:1.05}
 .rfm-sc{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1.5px solid var(--text)}
@@ -1066,8 +1070,8 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 @media (max-width:760px){
   .rfm{padding-left:0}.rfm-y{display:none}
   .rfm-mx{grid-template-columns:20px repeat(5,1fr);grid-template-rows:repeat(5,64px) 26px;gap:3px}
-  .rc{padding:5px}.rc b{font-size:.62rem;left:5px;top:5px;right:4px}.rc .cds{display:none}.rc .rcc{font-size:.52rem}
-  .rc.on::after{display:none}.rc.on b{right:4px}
+  .rfm-mx .rc{padding:5px}.rfm-mx .rc b{font-size:.62rem;left:5px;top:5px;right:4px}.rfm-mx .rc .cds{display:none}.rfm-mx .rc .rcc{font-size:.52rem}
+  .rfm-mx .rc.on::after{display:none}.rfm-mx .rc.on b{right:4px}
   .rfm-x,.rfm-offs{margin-left:0}.rfm-x{font-size:.56rem}
   .rfm-offg{grid-template-columns:1fr 1fr}
 }
@@ -1102,7 +1106,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 <div class="sw-menu" id="swMenu">
   <div class="sw-menu-in">
     <nav class="sw-menu-list" id="menu">
-      <a href="#case"><span>02</span>Case Study</a><a href="#deepdive"><span>03</span>AI Agent</a><a href="#urgency"><span>04</span>Urgency Engine</a><a href="#portal"><span>05</span>Portal</a><a href="#projects"><span>06</span>Projects</a><a href="#experience"><span>07</span>Experience</a><a href="#skills"><span>08</span>Toolkit</a><a href="#education"><span>09</span>Education</a><a href="#writing"><span>10</span>Writing</a><a href="#contact"><span>11</span>Contact</a>
+      <a href="#deepdive"><span>02</span>AI Agent</a><a href="#urgency"><span>03</span>Urgency Engine</a><a href="#portal"><span>04</span>Portal</a><a href="#case"><span>05</span>Framework</a><a href="#projects"><span>06</span>Projects</a><a href="#experience"><span>07</span>Experience</a><a href="#skills"><span>08</span>Toolkit</a><a href="#education"><span>09</span>Education</a><a href="#writing"><span>10</span>Writing</a><a href="#contact"><span>11</span>Contact</a>
     </nav>
     <div class="sw-menu-side">
       <small>Contact</small><a href="https://www.linkedin.com/in/khurramrukhsar" target="_blank" rel="noopener">Message me on LinkedIn ↗</a>
@@ -1128,9 +1132,9 @@ html.sw-menu-open .sw-prog{opacity:0!important}
   </div>
   <div class="sw-state">
     <p>I own data from warehouse to boardroom, turning it into <em>decisions</em> that move the business: pipelines, AI agents, executive reporting and competitive strategy.</p>
-    <div class="sw-cta"><a href="#case" class="sw-btn">See the work <span>↓</span></a><a href="#contact" class="sw-btn ghost">Get in touch <span>→</span></a></div>
+    <div class="sw-cta"><a href="#deepdive" class="sw-btn">See the work <span>↓</span></a><a href="#contact" class="sw-btn ghost">Get in touch <span>→</span></a></div>
   </div>
-  <a href="#case" class="sw-skip" id="swSkip">Skip intro <span>⏭</span></a>
+  <a href="#deepdive" class="sw-skip" id="swSkip">Skip intro <span>⏭</span></a>
 </section>
 <div class="sw-player" id="swPlayer" aria-label="Page scrubber">
   <button class="sw-play" id="swPlay" aria-label="Autoplay the portfolio"><svg viewBox="0 0 24 24" width="14" height="14"><path class="pl" d="M7 4l13 8-13 8z" fill="currentColor"/><g class="pa" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></g></svg></button>
@@ -1159,39 +1163,12 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 </section>
 
 <!-- ================= FEATURED CASE STUDY ================= -->
-<section id="case" style="padding-top:40px">
-  <div class="wrap">
-    <div class="eyebrow reveal">02 — featured case study</div>
-    <h2 class="sec-title reveal d1">Competitive intelligence at <span class="grad-text">STARZPLAY</span>.</h2>
-    <p class="sec-sub reveal d2">The streaming market in the region is crowded. I ran an end-to-end study of how a key competitor plans and executes, and turned it into strategic recommendations for leadership.</p>
 
-    <div class="feature reveal d2">
-      <div class="feature-l">
-        <span class="badge">★ Strategy · Presented to leadership</span>
-        <h3>From competitor signals to strategic recommendations</h3>
-        <p>A structured study of a direct competitor's strategy and execution, benchmarked against STARZPLAY's own performance. <b style="color:var(--text)">Click a step</b> to walk through the method.</p>
-        <div class="steps">
-          <div class="step"><div class="n">01</div><div><h4>Map the strategy</h4><p>Broke down the competitor's positioning, content and pricing approach, and go-to-market moves.</p></div></div>
-          <div class="step"><div class="n">02</div><div><h4>Assess the execution</h4><p>Studied how that strategy played out in practice and where it worked or fell short.</p></div></div>
-          <div class="step"><div class="n">03</div><div><h4>Benchmark &amp; find gaps</h4><p>Compared their approach with our own KPIs to find threats and opportunities.</p></div></div>
-          <div class="step"><div class="n">04</div><div><h4>Recommend</h4><p>Presented leadership with prioritised, data-backed recommendations.</p></div></div>
-        </div>
-      </div>
-      <div class="feature-r">
-        <div class="ci" id="ci">
-          <div class="ci-head"><div><b id="ciTitle">Map the strategy</b><small id="ciSub"></small></div><span class="ci-tag">Illustrative demo · anonymised</span></div>
-          <div class="ci-body" id="ciBody"></div>
-          <div class="ci-foot" id="ciFoot"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ================= DEEP DIVE: RFM SMS AGENT ================= -->
 <section id="deepdive" style="padding-top:40px">
   <div class="wrap">
-    <div class="eyebrow reveal">03 — project deep dive</div>
+    <div class="eyebrow reveal">02 — project deep dive</div>
     <h2 class="sec-title reveal d1">An AI agent that writes <span class="grad-text">every farmer</span> their own SMS.</h2>
     <p class="sec-sub reveal d2">Designed and shipped end to end at Bakhabar Kissan, this system takes RFM-segmented customers, picks products for each person with a hybrid recommender, has an LLM write Urdu messages in the right tone for each segment, and sends them at scale with tracked links.</p>
 
@@ -1234,13 +1211,13 @@ html.sw-menu-open .sw-prog{opacity:0!important}
         </div>
         <div class="phone">
           <div class="notch"></div>
-          <div class="ph-head"><div class="av">BK</div><div><b>BaKhabar Kissan</b><small id="phSeg">Champions</small></div></div>
+          <div class="ph-head"><div class="av">AM</div><div><b>Agri Marketplace</b><small id="phSeg">Champions</small></div></div>
           <div class="ph-body">
             <div class="bubble" id="bubble"></div>
             <div class="ph-meta">Delivered · tracked link</div>
           </div>
         </div>
-        <p class="ph-note">Real template from the repo. The customer name, products and link are sample values.</p>
+        <p class="ph-note">Template from the project, with the company name removed. The customer name, products and link are sample values.</p>
       </div>
     </div>
 
@@ -1269,8 +1246,6 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 
     <div class="dd-foot reveal">
       <div class="tags"><span class="tag">Python 3.10</span><span class="tag">Streamlit</span><span class="tag">PostgreSQL</span><span class="tag">scikit-learn</span><span class="tag">XGBoost</span><span class="tag">DeepSeek-V3.1</span><span class="tag">Ollama</span><span class="tag">aiohttp</span><span class="tag">Claude Code</span></div>
-      <a class="btn ghost" href="https://github.com/KhurramRukhsar/rfm-marketing-automation" target="_blank">View the code
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
     </div>
   </div>
 </section>
@@ -1278,14 +1253,14 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 <!-- ================= DEEP DIVE 2: URGENCY ENGINE ================= -->
 <section id="urgency" style="padding-top:40px">
   <div class="wrap">
-    <div class="eyebrow reveal">04 — project deep dive</div>
+    <div class="eyebrow reveal">03 — project deep dive</div>
     <h2 class="sec-title reveal d1">Which farmer needs help <span class="grad-text">first</span>?</h2>
-    <p class="sec-sub reveal d2">I designed and prototyped a decision engine at Bakhabar Kissan. It gives every crop-disease case reported by a farmer an urgency score from 0 to 10. The score combines agronomy knowledge, the crop's growth stage, how fresh the case is, and whether local weather is abnormal. An LLM then writes a short SMS advisory. The calculator here runs the same formula on the same knowledge base, so try it.</p>
+    <p class="sec-sub reveal d2">I designed and prototyped a decision engine at Bakhabar Kissan. It gives every crop-disease case reported by a farmer an urgency score from 0 to 10. The score combines agronomy knowledge, the crop's growth stage, how fresh the case is, and whether local weather is abnormal. An LLM then writes a short SMS advisory. The calculator below shows how it works, using dummy weights and a made-up knowledge base, so try it.</p>
 
     <div class="w-strip reveal d2">
-      <div style="--w:40%;--c:var(--pink)"><b>40%</b><span>Disease severity</span><i></i></div>
+      <div style="--w:35%;--c:var(--pink)"><b>35%</b><span>Disease severity</span><i></i></div>
       <div style="--w:25%;--c:var(--violet)"><b>25%</b><span>Growth-stage sensitivity</span><i></i></div>
-      <div style="--w:15%;--c:var(--cyan)"><b>15%</b><span>Crop × disease × stage risk</span><i></i></div>
+      <div style="--w:20%;--c:var(--cyan)"><b>20%</b><span>Crop × disease × stage risk</span><i></i></div>
       <div style="--w:10%;--c:var(--amber)"><b>10%</b><span>Case freshness</span><i></i></div>
       <div style="--w:10%;--c:var(--green)"><b>10%</b><span>Weather anomaly</span><i></i></div>
     </div>
@@ -1299,7 +1274,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
         </div>
         <p class="why" id="uWhy"></p>
         <div class="fld"><label>Case reported</label><div class="seg3" id="uAge"><button data-v="10" class="on">Last 24 h</button><button data-v="5">1–3 days ago</button><button data-v="1">3+ days ago</button></div></div>
-        <div class="fld"><label>Today's weather <small>(compared with the location's own 30-day norms)</small></label>
+        <div class="fld"><label>Today's weather <small>(dummy scoring for the demo)</small></label>
           <div class="pills wx" id="uWx">
             <button data-p="20,12,0,50">☀️ Normal</button><button data-p="44,30,0,10">🔥 Heatwave</button><button data-p="24,16,60,95">🌧️ Heavy rain</button><button data-p="6,-2,2,60">🥶 Cold snap</button><button data-p="27,18,8,88">🌫️ Humid &amp; cloudy</button>
           </div>
@@ -1313,18 +1288,19 @@ html.sw-menu-open .sw-prog{opacity:0!important}
       </div>
 
       <div class="calc-out">
+        <span class="calc-dummy">Dummy data</span>
         <div class="gauge">
           <svg viewBox="0 0 240 140">
             <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#34d399"/><stop offset=".4" stop-color="#fbbf24"/><stop offset=".65" stop-color="#fb923c"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
             <path d="M20 125 A100 100 0 0 1 220 125" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="16" stroke-linecap="round"/>
             <path id="gArc" d="M20 125 A100 100 0 0 1 220 125" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100"/>
-            <line x1="152.5" y1="30" x2="148" y2="44" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
-            <line x1="47" y1="58" x2="58" y2="66" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+            <line x1="178.8" y1="44.1" x2="170.0" y2="56.2" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+            <line x1="104.4" y1="26.2" x2="106.7" y2="41.0" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
             <g id="gNeedle" style="transform-origin:120px 125px"><line x1="120" y1="125" x2="120" y2="42" style="stroke:var(--text)" stroke-width="3" stroke-linecap="round"/><circle cx="120" cy="125" r="7" style="fill:var(--text)"/></g>
           </svg>
           <div class="g-val"><b id="uScore">0.0</b><small>/ 10 urgency score</small></div>
           <div class="band" id="uBand">MEDIUM</div>
-          <div class="g-legend"><span>MEDIUM &lt; 4</span><span>HIGH ≥ 4</span><span>CRITICAL ≥ 6.5</span></div>
+          <div class="g-legend"><span>MEDIUM &lt; 4.5</span><span>HIGH ≥ 4.5</span><span>CRITICAL ≥ 7</span></div>
         </div>
         <div class="contrib">
           <div class="c-bar" id="uBar"></div>
@@ -1336,7 +1312,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
         </div>
       </div>
     </div>
-    <p class="calc-note reveal">Weather is scored against sample 30-day norms for one location (95th-percentile max temperature 30 °C, 75th-percentile rain 5 mm). The real system works these norms out for every weather site from its own history. The SMS preview follows the same rules the system's LLM prompt enforces.</p>
+    <p class="calc-note reveal"><b>Dummy data:</b> the weights, thresholds, weather scoring and crop–disease scores in this calculator are made up for illustration and are not the production model. The SMS preview follows the same rules as the system's LLM prompt.</p>
 
     <div class="dd-grid three">
       <div class="dd-card reveal d1">
@@ -1369,8 +1345,6 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 
     <div class="dd-foot reveal">
       <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">PostgreSQL</span><span class="tag">SQL percentiles</span><span class="tag">JSONB</span><span class="tag">Ollama LLM</span><span class="tag">Streamlit</span></div>
-      <a class="btn ghost" href="https://github.com/KhurramRukhsar/urgency-score" target="_blank">View the code
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
     </div>
   </div>
 </section>
@@ -1378,7 +1352,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 <!-- ================= PORTAL MOCKUP ================= -->
 <section id="portal" style="padding-top:40px">
   <div class="wrap">
-    <div class="eyebrow reveal">05 — product mockup</div>
+    <div class="eyebrow reveal">04 — product mockup</div>
     <h2 class="sec-title reveal d1">An analytics portal for <span class="grad-text">390K+ farmers</span>.</h2>
     <p class="sec-sub reveal d2">At Bakhabar Kissan I helped lay the foundation for a new business and revenue vertical: an agricultural analytics portal. As its sole owner, I scoped it, designed the UI, built the data backend and ran user acceptance testing with stakeholders. It combines 5 data sources through a bronze → silver → gold pipeline into 11 dashboards. Click through the mockup below.</p>
 
@@ -1393,7 +1367,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
       <div class="br-bar">
         <div class="dots"><i></i><i></i><i></i></div>
         <div class="br-url"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg><span id="ptUrl">agri-analytics / overview</span></div>
-        <span class="br-tag">Mockup · sample data</span>
+        <span class="br-tag">Mockup · dummy data</span>
       </div>
       <div class="pt">
         <aside class="pt-side">
@@ -1411,13 +1385,13 @@ html.sw-menu-open .sw-prog{opacity:0!important}
         <main class="pt-main">
           <div class="pt-top">
             <div><h4 id="ptTitle">Overview</h4><small id="ptSub">Farmer base at a glance</small></div>
-            <div class="pt-filters"><span>📅 Last 12 months</span><span>📍 All provinces</span></div>
+            <div class="pt-filters"><span class="pt-dummy">Dummy data</span><span>📅 Last 12 months</span><span>📍 All provinces</span></div>
           </div>
           <div id="pv" class="pv"></div>
         </main>
       </div>
     </div>
-    <p class="calc-note reveal">This mockup recreates the portal's structure and dashboard types. All numbers and charts in it are sample data, except 390K+ farmers, 5 data sources and 11 dashboards, which are real.</p>
+    <p class="calc-note reveal">This mockup recreates the portal's structure and dashboard types. Every number and chart inside it is dummy data, for illustration only.</p>
 
     <!-- medallion pipeline -->
     <div class="medal reveal d1">
@@ -1430,6 +1404,35 @@ html.sw-menu-open .sw-prog{opacity:0!important}
       <div class="m-col gold"><small>Gold</small><b>Business marts</b><p>Tables shaped for each dashboard's questions</p></div>
       <div class="m-arrow"><i></i></div>
       <div class="m-col app"><small>Portal</small><b>Next.js</b><p>11 dashboards powering a new revenue vertical</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="case" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow reveal">05 — framework</div>
+    <h2 class="sec-title reveal d1">How I run <span class="grad-text">competitor analysis</span>.</h2>
+    <p class="sec-sub reveal d2">A repeatable four-step framework for turning competitor signals into prioritised, evidence-backed recommendations. Walk through it below with a fictional example.</p>
+
+    <div class="feature reveal d2">
+      <div class="feature-l">
+        <span class="badge">★ Framework · Strategy &amp; insights</span>
+        <h3>From competitor signals to recommendations</h3>
+        <p>A structured way to study a competitor's strategy and execution, and benchmark it against your own performance. <b style="color:var(--text)">Click a step</b> to walk through the method.</p>
+        <div class="steps">
+          <div class="step"><div class="n">01</div><div><h4>Map the strategy</h4><p>Break down the competitor's positioning, offering, pricing and go-to-market moves.</p></div></div>
+          <div class="step"><div class="n">02</div><div><h4>Assess the execution</h4><p>Judge how each move played out in practice: where it worked and where it fell short.</p></div></div>
+          <div class="step"><div class="n">03</div><div><h4>Benchmark &amp; find gaps</h4><p>Score both sides on the same dimensions to find threats and opportunities.</p></div></div>
+          <div class="step"><div class="n">04</div><div><h4>Recommend</h4><p>Prioritise actions by impact and effort, each traced back to evidence.</p></div></div>
+        </div>
+      </div>
+      <div class="feature-r">
+        <div class="ci" id="ci">
+          <div class="ci-head"><div><b id="ciTitle">Map the strategy</b><small id="ciSub"></small></div><span class="ci-tag">Fictional example</span></div>
+          <div class="ci-body" id="ciBody"></div>
+          <div class="ci-foot" id="ciFoot"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1454,7 +1457,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
         <h3>Agri Analytics Portal</h3>
         <p>The data foundation of a new business and revenue vertical: 5 sources, a medallion pipeline and 11 dashboards serving 390K+ farmers, owned end to end from scoping to sign-off.</p>
         <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">Next.js</span><span class="tag">Medallion</span><span class="tag">Product</span></div>
-        <span class="go">Chapter 05 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+        <span class="go">Chapter 04 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
       </a>
       <a class="proj reveal d2" data-cat="analytics ai" href="https://github.com/KhurramRukhsar/rfm-marketing-automation" target="_blank">
         <div class="icon">🎯</div>
@@ -1518,7 +1521,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
         <div class="scope"><span>Scope</span>Executive reporting · Competitive strategy · Business performance reviews</div>
         <ul>
           <li><strong>Competitor analysis:</strong> ran an end-to-end study of a key competitor's strategy and execution, benchmarked it against our performance, and presented prioritised, data-backed recommendations to leadership. <span class="hl">Strategy</span></li>
-          <li>Own <strong>end-to-end monthly performance reporting</strong>: executive-ready dashboards, visualisations and commentary for senior leadership and the C-level of e&amp; (etisalat and).</li>
+          <li>Own <strong>end-to-end monthly performance reporting</strong>: executive-ready dashboards, visualisations and commentary for senior management and group-level executive leadership.</li>
           <li>Own <strong>weekly business performance reviews</strong> for 20 cross-functional stakeholders, turning the previous week's data into trends, insights and recommendations, and fielding ad-hoc strategic questions from leadership.</li>
         </ul>
       </div>
@@ -1671,7 +1674,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 
 <footer class="sw-foot">
   <div class="sw-foot-big">KR<span>©<span id="yr"></span></span></div>
-  <div class="sw-foot-row"><span>Khurram Rukhsar — Data Analyst</span><span>Streaming · BI · AI</span><a href="https://www.linkedin.com/in/khurramrukhsar" target="_blank" rel="noopener">LinkedIn ↗</a><span>Set in Inter Tight · Hand-built</span></div>
+  <div class="sw-foot-row"><span>Khurram Rukhsar — Data Analyst</span><span>Streaming · BI · AI</span><a href="https://www.linkedin.com/in/khurramrukhsar" target="_blank" rel="noopener">LinkedIn ↗</a><span>Built with Claude Code</span></div>
 </footer>
 
 
@@ -1787,7 +1790,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 
 
   /* ---------- deep dive: segments + phone ---------- */
-  const EX = {"Champions": "محترم {{name}}،\nآپ ہمارے خاص کسان ہیں۔ آپ کے اعتماد کا شکریہ۔\nہماری مندرجہ ذیل مصنوعات دیکھیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "Loyal Customers": "محترم {{name}}،\nآپ کی مسلسل وابستگی ہمارے لیے اہم ہے۔\nیہ مصنوعات آپ کے کام آئیں گی:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "Potential Loyalist": "محترم {{name}}،\nہم نے آپ کی دلچسپی دیکھی ہے۔\nیہ مصنوعات آپ کے لیے بہتر انتخاب ہو سکتی ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "Frequent Low Spenders": "محترم {{name}}،\nکم خرچ میں بہتر فائدہ حاصل کریں۔\nہماری مندرجہ ذیل مصنوعات دیکھیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "About To Sleep": "محترم {{name}}،\nہم آپ کو دوبارہ دیکھنا چاہیں گے۔\nیہ مصنوعات آپ کے کام آ سکتی ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "Need Attention": "محترم {{name}}،\nہمیں آپ کی کمی محسوس ہو رہی ہے۔\nیہ مصنوعات آپ کے لیے مفید ہوں گی:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "At Risk": "محترم {{name}}،\nہم چاہتے ہیں آپ واپس آئیں۔\nیہ مصنوعات آپ کے لیے منتخب کی گئی ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "Potential Sleepers": "محترم {{name}}،\nکافی عرصے بعد آپ سے رابطہ ہو رہا ہے۔\nیہ مصنوعات آپ کے لیے فائدہ مند ہوں گی:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "Others": "محترم {{name}}،\nہماری کچھ منتخب مصنوعات آپ کے لیے ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "Hibernating": "محترم {{name}}،\nکافی وقت بعد آپ سے رابطہ ہو رہا ہے۔\nہماری مندرجہ ذیل مصنوعات دیکھیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "Lost": "محترم {{name}}،\nجب بھی ضرورت ہو، ہم آپ کے ساتھ ہیں۔\nہماری مندرجہ ذیل مصنوعات دیکھیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم", "New Customers": "محترم {{name}}،\nباخبر کسان میں خوش آمدید۔\nیہ مصنوعات آپ کے لیے اچھی شروعات ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، باخبر کسان ٹیم"};
+  const EX = {"Champions": "محترم {{name}}،\nآپ ہمارے خاص کسان ہیں۔ آپ کے اعتماد کا شکریہ۔\nہماری مندرجہ ذیل مصنوعات دیکھیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "Loyal Customers": "محترم {{name}}،\nآپ کی مسلسل وابستگی ہمارے لیے اہم ہے۔\nیہ مصنوعات آپ کے کام آئیں گی:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "Potential Loyalist": "محترم {{name}}،\nہم نے آپ کی دلچسپی دیکھی ہے۔\nیہ مصنوعات آپ کے لیے بہتر انتخاب ہو سکتی ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "Frequent Low Spenders": "محترم {{name}}،\nکم خرچ میں بہتر فائدہ حاصل کریں۔\nہماری مندرجہ ذیل مصنوعات دیکھیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "About To Sleep": "محترم {{name}}،\nہم آپ کو دوبارہ دیکھنا چاہیں گے۔\nیہ مصنوعات آپ کے کام آ سکتی ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "Need Attention": "محترم {{name}}،\nہمیں آپ کی کمی محسوس ہو رہی ہے۔\nیہ مصنوعات آپ کے لیے مفید ہوں گی:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "At Risk": "محترم {{name}}،\nہم چاہتے ہیں آپ واپس آئیں۔\nیہ مصنوعات آپ کے لیے منتخب کی گئی ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "Potential Sleepers": "محترم {{name}}،\nکافی عرصے بعد آپ سے رابطہ ہو رہا ہے۔\nیہ مصنوعات آپ کے لیے فائدہ مند ہوں گی:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "Others": "محترم {{name}}،\nہماری کچھ منتخب مصنوعات آپ کے لیے ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "Hibernating": "محترم {{name}}،\nکافی وقت بعد آپ سے رابطہ ہو رہا ہے۔\nہماری مندرجہ ذیل مصنوعات دیکھیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "Lost": "محترم {{name}}،\nجب بھی ضرورت ہو، ہم آپ کے ساتھ ہیں۔\nہماری مندرجہ ذیل مصنوعات دیکھیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم", "New Customers": "محترم {{name}}،\nہمارے ساتھ شامل ہونے پر خوش آمدید۔\nیہ مصنوعات آپ کے لیے اچھی شروعات ہیں:\n{{products}}\nنیک تمناؤں کے ساتھ، ہماری ٹیم"};
   const SEG = [
     ['Champions','var(--green)','Reward loyalty','Warm, grateful, exclusive','Show appreciation and make them feel VIP'],
     ['Loyal Customers','var(--green)','Stay in touch','Friendly, engaged, thankful','Strengthen the relationship and offer a preview of what is new'],
@@ -1827,7 +1830,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
       const esc = s => s.replace(/[&<>]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[ch]));
       bubble.innerHTML = esc(tpl)
         .replace('{{name}}', 'علی احمد صاحب')
-        .replace('{{products}}', '<span class="en">• 3pcs Self-Watering Planters<br>• Garden Gloves with Claws</span><span class="lnk">shops.bkk.ag/tp3f9a1c</span>');
+        .replace('{{products}}', '<span class="en">• 3pcs Self-Watering Planters<br>• Garden Gloves with Claws</span><span class="lnk">shop.example/tp3f9a1c</span>');
     }, reduce ? 0 : 900);
   }
   SEG.forEach((s, i) => {
@@ -1861,7 +1864,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
         requestAnimationFrame(loop);
       })();
     }
-    const SECS = [['case','02','Case Study'],['deepdive','03','AI Agent'],['urgency','04','Urgency Engine'],['portal','05','Portal'],['projects','06','Projects'],['experience','07','Experience'],['skills','08','Toolkit'],['education','09','Education'],['writing','10','Writing'],['contact','11','Contact']].filter(s => document.getElementById(s[0]));
+    const SECS = [['deepdive','02','AI Agent'],['urgency','03','Urgency Engine'],['portal','04','Portal'],['case','05','Framework'],['projects','06','Projects'],['experience','07','Experience'],['skills','08','Toolkit'],['education','09','Education'],['writing','10','Writing'],['contact','11','Contact']].filter(s => document.getElementById(s[0]));
     const prog = $('#swProg'), bar = $('#swBar'), mid = $('#swMidSec');
     prog.innerHTML = SECS.map(([id, n, t]) => `<a class="sw-pseg" href="#${id}" title="${n} ${t}"><em>${n}</em><span>${t}</span><i></i></a>`).join('');
     const segs = [...prog.children]; let cur = -1;
@@ -1955,7 +1958,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
   pio.observe($('#pipe'));
 
   /* ---------- urgency engine calculator (port of src/scoring.py + src/weather.py) ---------- */
-  const KB = {"sev": {"Wheat leaf rust": [9.0, "High Threat"], "Stem rust": [9.0, "High Threat"], "Yellow stripe rust": [9.0, "High Threat"], "Powdery mildew": [6.0, "Medium Threat"], "Fusarium head blight": [5.0, "Medium Threat"], "Loose smut of wheat": [5.0, "Medium Threat"], "Leaf Blight": [6.0, "Medium Threat"], "Septoria Leaf Spot": [7.0, "Medium Threat"], "Rust of cotton": [9.0, "High Threat"], "Anthracnose of cotton": [6.0, "Medium Threat"], "Cotton Boll Rot": [6.0, "Medium Threat"], "Bacterial blight": [8.0, "High Threat"], "Verticillium wilt": [9.0, "High Threat"], "Fusarium wilt": [9.0, "High Threat"], "Late Blight": [9.0, "High Threat"], "Early Blight": [8.0, "High Threat"], "Black scurf": [2.0, "Low Threat"], "Red rot": [8.0, "High Threat"], "Smut of sugarcane": [5.0, "Medium Threat"], "Sugarcane common rust": [9.0, "High Threat"], "Orange rust of sugarcane": [9.0, "High Threat"], "Pokkah boeng": [4.0, "Medium Threat"], "Blast of rice": [9.0, "High Threat"], "Brown Spot": [7.0, "Medium Threat"], "Anthracnose": [6.0, "Medium Threat"]}, "stage": {"Pre Sowing": 0.0, "Land Prepration": 1.0, "Seed Selection": 1.0, "Sowing": 4.0, "Seed Bed Preparation": 3.0, "Nursery Raising": 4.0, "Transplantation": 6.0, "Germination": 5.0, "Transplanting": 8.0, "Vegetative": 5.0, "Irrigation": 3.0, "Fertilization": 4.0, "Hoeing": 4.0, "Weedicide Application": 4.0, "Pesticide Application": 6.0, "Flowering": 10.0, "Fruiting": 10.0, "Maturity": 3.0, "Current Yield": 2.0, "Previous Yield": 1.0, "Current Market Rate": 2.0, "Harvesting": 1.0, "Post Harvest": 0.0}, "map": [["Wheat", "Wheat leaf rust", "Pre Sowing", 1, "Seed-borne infection risk"], ["Wheat", "Wheat leaf rust", "Germination", 3, "Young plants vulnerable"], ["Wheat", "Wheat leaf rust", "Transplanting", 5, "Transplant stress increases susceptibility"], ["Wheat", "Wheat leaf rust", "Vegetative", 7, "Active growth phase - high spread"], ["Wheat", "Wheat leaf rust", "Flowering", 9, "Critical yield formation period"], ["Wheat", "Wheat leaf rust", "Fruiting", 8, "Direct grain quality impact"], ["Wheat", "Wheat leaf rust", "Maturity", 4, "Yield mostly set"], ["Wheat", "Wheat leaf rust", "Harvesting", 2, "Minimal field impact"], ["Wheat", "Stem rust", "Pre Sowing", 1, "Seed treatment possible"], ["Wheat", "Stem rust", "Germination", 4, "Destructive to young stems"], ["Wheat", "Stem rust", "Transplanting", 6, "Stress weakens resistance"], ["Wheat", "Stem rust", "Vegetative", 8, "Stem damage reduces support"], ["Wheat", "Stem rust", "Flowering", 10, "Catastrophic yield loss"], ["Wheat", "Stem rust", "Fruiting", 9, "Complete crop failure risk"], ["Wheat", "Stem rust", "Maturity", 5, "Reduced grain filling"], ["Wheat", "Stem rust", "Harvesting", 3, "Quality deterioration"], ["Wheat", "Yellow stripe rust", "Pre Sowing", 2, "Overwintering spores"], ["Wheat", "Yellow stripe rust", "Germination", 4, "Rapid early spread"], ["Wheat", "Yellow stripe rust", "Transplanting", 5, "Moderate impact"], ["Wheat", "Yellow stripe rust", "Vegetative", 7, "Leaf area reduction"], ["Wheat", "Yellow stripe rust", "Flowering", 9, "Photosynthesis disruption"], ["Wheat", "Yellow stripe rust", "Fruiting", 8, "Yield reduction"], ["Wheat", "Yellow stripe rust", "Maturity", 4, "Limited damage"], ["Wheat", "Yellow stripe rust", "Harvesting", 2, "Post-harvest only"], ["Wheat", "Powdery mildew", "Pre Sowing", 0, "Not soil-borne"], ["Wheat", "Powdery mildew", "Germination", 2, "Low humidity needed"], ["Wheat", "Powdery mildew", "Transplanting", 3, "Mild conditions"], ["Wheat", "Powdery mildew", "Vegetative", 5, "Moderate spread"], ["Wheat", "Powdery mildew", "Flowering", 7, "Affects grain set"], ["Wheat", "Powdery mildew", "Fruiting", 6, "Quality impact"], ["Wheat", "Powdery mildew", "Maturity", 3, "Reduced severity"], ["Wheat", "Powdery mildew", "Harvesting", 1, "No field impact"], ["Wheat", "Fusarium head blight", "Pre Sowing", 3, "Seed contamination"], ["Wheat", "Fusarium head blight", "Germination", 1, "Not active"], ["Wheat", "Fusarium head blight", "Transplanting", 2, "Low risk"], ["Wheat", "Fusarium head blight", "Vegetative", 1, "Not applicable"], ["Wheat", "Fusarium head blight", "Flowering", 8, "Infection begins"], ["Wheat", "Fusarium head blight", "Fruiting", 9, "Toxin production"], ["Wheat", "Fusarium head blight", "Maturity", 7, "Grain contamination"], ["Wheat", "Fusarium head blight", "Harvesting", 5, "Storage risk"], ["Wheat", "Loose smut of wheat", "Pre Sowing", 6, "Seed-borne infection"], ["Wheat", "Loose smut of wheat", "Germination", 8, "Systemic infection"], ["Wheat", "Loose smut of wheat", "Transplanting", 7, "Established infection"], ["Wheat", "Loose smut of wheat", "Vegetative", 6, "Internal growth"], ["Wheat", "Loose smut of wheat", "Flowering", 10, "Complete head destruction"], ["Wheat", "Loose smut of wheat", "Fruiting", 10, "Total yield loss"], ["Wheat", "Loose smut of wheat", "Maturity", 9, "Visible symptoms"], ["Wheat", "Loose smut of wheat", "Harvesting", 5, "Only affects next crop"], ["Wheat", "Leaf Blight", "Pre Sowing", 1, "Low risk"], ["Wheat", "Leaf Blight", "Germination", 3, "Seedling blight"], ["Wheat", "Leaf Blight", "Transplanting", 5, "Stress period"], ["Wheat", "Leaf Blight", "Vegetative", 7, "Defoliation risk"], ["Wheat", "Leaf Blight", "Flowering", 8, "Photosynthesis loss"], ["Wheat", "Leaf Blight", "Fruiting", 7, "Yield impact"], ["Wheat", "Leaf Blight", "Maturity", 4, "Reduced severity"], ["Wheat", "Leaf Blight", "Harvesting", 2, "Minimal impact"], ["Wheat", "Septoria Leaf Spot", "Pre Sowing", 2, "Residue carryover"], ["Wheat", "Septoria Leaf Spot", "Germination", 4, "Splash dispersal"], ["Wheat", "Septoria Leaf Spot", "Transplanting", 6, "Favorable conditions"], ["Wheat", "Septoria Leaf Spot", "Vegetative", 8, "Severe defoliation"], ["Wheat", "Septoria Leaf Spot", "Flowering", 9, "Grain size reduction"], ["Wheat", "Septoria Leaf Spot", "Fruiting", 8, "Yield loss"], ["Wheat", "Septoria Leaf Spot", "Maturity", 5, "Slows spread"], ["Wheat", "Septoria Leaf Spot", "Harvesting", 3, "Quality only"], ["Wheat", "Tan spot", "Pre Sowing", 3, "Residue-borne"], ["Wheat", "Tan spot", "Germination", 5, "Early infection"], ["Wheat", "Tan spot", "Transplanting", 6, "Moderate severity"], ["Wheat", "Tan spot", "Vegetative", 8, "Defoliation"], ["Wheat", "Tan spot", "Flowering", 7, "Yield effect"], ["Wheat", "Tan spot", "Fruiting", 6, "Quality impact"], ["Wheat", "Tan spot", "Maturity", 4, "Reduced activity"], ["Wheat", "Tan spot", "Harvesting", 2, "Field cleanup needed"], ["Cotton", "Rust of cotton", "Pre Sowing", 1, "Low risk"], ["Cotton", "Rust of cotton", "Germination", 3, "Seedling susceptibility"], ["Cotton", "Rust of cotton", "Transplanting", 5, "Stress increases risk"], ["Cotton", "Rust of cotton", "Vegetative", 7, "Leaf damage"], ["Cotton", "Rust of cotton", "Flowering", 8, "Boll setting affected"], ["Cotton", "Rust of cotton", "Fruiting", 9, "Boll development"], ["Cotton", "Rust of cotton", "Maturity", 6, "Lint quality"], ["Cotton", "Rust of cotton", "Harvesting", 4, "Picking difficulty"], ["Cotton", "Anthracnose of cotton", "Pre Sowing", 4, "Seed infection"], ["Cotton", "Anthracnose of cotton", "Germination", 6, "Damping-off"], ["Cotton", "Anthracnose of cotton", "Transplanting", 7, "Stem lesions"], ["Cotton", "Anthracnose of cotton", "Vegetative", 8, "Defoliation"], ["Cotton", "Anthracnose of cotton", "Flowering", 9, "Boll infection"], ["Cotton", "Anthracnose of cotton", "Fruiting", 10, "Boll rot"], ["Cotton", "Anthracnose of cotton", "Maturity", 8, "Lint staining"], ["Cotton", "Anthracnose of cotton", "Harvesting", 5, "Reduced quality"], ["Cotton", "Cotton Boll Rot", "Pre Sowing", 0, "Not applicable"], ["Cotton", "Cotton Boll Rot", "Germination", 0, "Not applicable"], ["Cotton", "Cotton Boll Rot", "Transplanting", 0, "Not applicable"], ["Cotton", "Cotton Boll Rot", "Vegetative", 0, "Not applicable"], ["Cotton", "Cotton Boll Rot", "Flowering", 5, "Initial infection"], ["Cotton", "Cotton Boll Rot", "Fruiting", 9, "Severe boll damage"], ["Cotton", "Cotton Boll Rot", "Maturity", 8, "Yield loss"], ["Cotton", "Cotton Boll Rot", "Harvesting", 6, "Harvest contamination"], ["Cotton", "Bacterial blight", "Pre Sowing", 3, "Seed-borne"], ["Cotton", "Bacterial blight", "Germination", 5, "Angular leaf spot"], ["Cotton", "Bacterial blight", "Transplanting", 6, "Spread risk"], ["Cotton", "Bacterial blight", "Vegetative", 8, "Defoliation"], ["Cotton", "Bacterial blight", "Flowering", 7, "Reduced flowering"], ["Cotton", "Bacterial blight", "Fruiting", 8, "Boll infection"], ["Cotton", "Bacterial blight", "Maturity", 5, "Reduced spread"], ["Cotton", "Bacterial blight", "Harvesting", 3, "Quality impact"], ["Cotton", "Verticillium wilt", "Pre Sowing", 4, "Soil-borne"], ["Cotton", "Verticillium wilt", "Germination", 6, "Seedling wilt"], ["Cotton", "Verticillium wilt", "Transplanting", 8, "Stress induced"], ["Cotton", "Verticillium wilt", "Vegetative", 9, "Plant death"], ["Cotton", "Verticillium wilt", "Flowering", 10, "Complete failure"], ["Cotton", "Verticillium wilt", "Fruiting", 10, "No boll formation"], ["Cotton", "Verticillium wilt", "Maturity", 7, "Stunted plants"], ["Cotton", "Verticillium wilt", "Harvesting", 5, "Partial yield"], ["Cotton", "Fusarium wilt", "Pre Sowing", 5, "Soil pathogen"], ["Cotton", "Fusarium wilt", "Germination", 7, "Seedling death"], ["Cotton", "Fusarium wilt", "Transplanting", 8, "Transplant shock"], ["Cotton", "Fusarium wilt", "Vegetative", 9, "Vascular blockage"], ["Cotton", "Fusarium wilt", "Flowering", 10, "Plant collapse"], ["Cotton", "Fusarium wilt", "Fruiting", 10, "No production"], ["Cotton", "Fusarium wilt", "Maturity", 6, "Survivors only"], ["Cotton", "Fusarium wilt", "Harvesting", 4, "Field cleanup"], ["Potato", "Late Blight", "Pre Sowing", 2, "Seed tuber infection"], ["Potato", "Late Blight", "Germination", 5, "Emerging shoots"], ["Potato", "Late Blight", "Transplanting", 7, "Rapid spread conditions"], ["Potato", "Late Blight", "Vegetative", 9, "Complete defoliation"], ["Potato", "Late Blight", "Flowering", 10, "Tuber infection begins"], ["Potato", "Late Blight", "Fruiting", 10, "Tuber rot development"], ["Potato", "Late Blight", "Maturity", 8, "Storage rot risk"], ["Potato", "Late Blight", "Harvesting", 6, "Harvest contamination"], ["Potato", "Early Blight", "Pre Sowing", 3, "Seed-borne"], ["Potato", "Early Blight", "Germination", 4, "Leaf spots appear"], ["Potato", "Early Blight", "Transplanting", 6, "Moderate spread"], ["Potato", "Early Blight", "Vegetative", 8, "Defoliation"], ["Potato", "Early Blight", "Flowering", 7, "Yield impact"], ["Potato", "Early Blight", "Fruiting", 6, "Tuber quality"], ["Potato", "Early Blight", "Maturity", 5, "Reduced severity"], ["Potato", "Early Blight", "Harvesting", 3, "Minimal field impact"], ["Potato", "Black scurf", "Pre Sowing", 7, "Seed tuber infection"], ["Potato", "Black scurf", "Germination", 6, "Stem cankers"], ["Potato", "Black scurf", "Transplanting", 5, "Soil contact"], ["Potato", "Black scurf", "Vegetative", 4, "Minimal impact"], ["Potato", "Black scurf", "Flowering", 3, "No effect"], ["Potato", "Black scurf", "Fruiting", 5, "Tuber infection"], ["Potato", "Black scurf", "Maturity", 6, "Tuber quality"], ["Potato", "Black scurf", "Harvesting", 7, "Storage issues"], ["Potato", "Bacterial wilt", "Pre Sowing", 5, "Seed-borne"], ["Potato", "Bacterial wilt", "Germination", 7, "Seedling wilt"], ["Potato", "Bacterial wilt", "Transplanting", 8, "Rapid spread"], ["Potato", "Bacterial wilt", "Vegetative", 9, "Plant death"], ["Potato", "Bacterial wilt", "Flowering", 10, "Complete loss"], ["Potato", "Bacterial wilt", "Fruiting", 10, "Tuber rot"], ["Potato", "Bacterial wilt", "Maturity", 8, "Soil contamination"], ["Potato", "Bacterial wilt", "Harvesting", 6, "Harvest loss"], ["Potato", "Powdery scab", "Pre Sowing", 6, "Seed tuber infection"], ["Potato", "Powdery scab", "Germination", 5, "Root galls"], ["Potato", "Powdery scab", "Transplanting", 4, "Soil spread"], ["Potato", "Powdery scab", "Vegetative", 3, "Minimal impact"], ["Potato", "Powdery scab", "Flowering", 2, "No effect"], ["Potato", "Powdery scab", "Fruiting", 4, "Tuber infection"], ["Potato", "Powdery scab", "Maturity", 5, "Quality reduction"], ["Potato", "Powdery scab", "Harvesting", 6, "Market value loss"], ["Sugarcane", "Red rot", "Pre Sowing", 4, "Seed setts infection"], ["Sugarcane", "Red rot", "Germination", 6, "Shoot rot"], ["Sugarcane", "Red rot", "Transplanting", 7, "Internal infection"], ["Sugarcane", "Red rot", "Vegetative", 8, "Stem deterioration"], ["Sugarcane", "Red rot", "Flowering", 9, "Yield reduction"], ["Sugarcane", "Red rot", "Fruiting", 10, "Juice quality loss"], ["Sugarcane", "Red rot", "Maturity", 9, "Sugar content drop"], ["Sugarcane", "Red rot", "Harvesting", 7, "Processing issues"], ["Sugarcane", "Smut of sugarcane", "Pre Sowing", 5, "Seed-borne"], ["Sugarcane", "Smut of sugarcane", "Germination", 7, "Systemic infection"], ["Sugarcane", "Smut of sugarcane", "Transplanting", 8, "Visible symptoms"], ["Sugarcane", "Smut of sugarcane", "Vegetative", 9, "Stunted growth"], ["Sugarcane", "Smut of sugarcane", "Flowering", 10, "Whip formation"], ["Sugarcane", "Smut of sugarcane", "Fruiting", 10, "No cane formation"], ["Sugarcane", "Smut of sugarcane", "Maturity", 8, "Poor juice"], ["Sugarcane", "Smut of sugarcane", "Harvesting", 6, "Reduced yield"], ["Sugarcane", "Sugarcane common rust", "Pre Sowing", 1, "Low risk"], ["Sugarcane", "Sugarcane common rust", "Germination", 3, "Leaf infection"], ["Sugarcane", "Sugarcane common rust", "Transplanting", 5, "Moderate spread"], ["Sugarcane", "Sugarcane common rust", "Vegetative", 7, "Defoliation"], ["Sugarcane", "Sugarcane common rust", "Flowering", 6, "Minimal effect"], ["Sugarcane", "Sugarcane common rust", "Fruiting", 5, "Quality impact"], ["Sugarcane", "Sugarcane common rust", "Maturity", 4, "Reduced severity"], ["Sugarcane", "Sugarcane common rust", "Harvesting", 2, "Field only"], ["Sugarcane", "Orange rust of sugarcane", "Pre Sowing", 2, "Spore carryover"], ["Sugarcane", "Orange rust of sugarcane", "Germination", 4, "Early infection"], ["Sugarcane", "Orange rust of sugarcane", "Transplanting", 6, "Rapid spread"], ["Sugarcane", "Orange rust of sugarcane", "Vegetative", 8, "Severe defoliation"], ["Sugarcane", "Orange rust of sugarcane", "Flowering", 7, "Yield effect"], ["Sugarcane", "Orange rust of sugarcane", "Fruiting", 6, "Quality impact"], ["Sugarcane", "Orange rust of sugarcane", "Maturity", 5, "Slows down"], ["Sugarcane", "Orange rust of sugarcane", "Harvesting", 3, "Minimal"], ["Sugarcane", "Pokkah boeng", "Pre Sowing", 1, "Not seed-borne"], ["Sugarcane", "Pokkah boeng", "Germination", 3, "Leaf distortion"], ["Sugarcane", "Pokkah boeng", "Transplanting", 5, "Moderate impact"], ["Sugarcane", "Pokkah boeng", "Vegetative", 7, "Top rot"], ["Sugarcane", "Pokkah boeng", "Flowering", 6, "Reduced growth"], ["Sugarcane", "Pokkah boeng", "Fruiting", 5, "Yield reduction"], ["Sugarcane", "Pokkah boeng", "Maturity", 4, "Less severe"], ["Sugarcane", "Pokkah boeng", "Harvesting", 2, "Field issue only"], ["Rice", "Blast of rice", "Pre Sowing", 3, "Seed infection"], ["Rice", "Blast of rice", "Germination", 5, "Leaf blast"], ["Rice", "Blast of rice", "Transplanting", 7, "Nursery infection"], ["Rice", "Blast of rice", "Vegetative", 8, "Node blast"], ["Rice", "Blast of rice", "Flowering", 9, "Neck blast"], ["Rice", "Blast of rice", "Fruiting", 10, "Complete yield loss"], ["Rice", "Blast of rice", "Maturity", 7, "Grain quality"], ["Rice", "Blast of rice", "Harvesting", 5, "Post-harvest risk"], ["Rice", "Sheath blight", "Pre Sowing", 2, "Soil-borne"], ["Rice", "Sheath blight", "Germination", 4, "Early infection"], ["Rice", "Sheath blight", "Transplanting", 6, "Water spread"], ["Rice", "Sheath blight", "Vegetative", 8, "Sheath infection"], ["Rice", "Sheath blight", "Flowering", 9, "Panicle emergence"], ["Rice", "Sheath blight", "Fruiting", 8, "Grain filling"], ["Rice", "Sheath blight", "Maturity", 6, "Yield reduction"], ["Rice", "Sheath blight", "Harvesting", 4, "Quality impact"], ["Rice", "Brown Spot", "Pre Sowing", 4, "Seed-borne"], ["Rice", "Brown Spot", "Germination", 6, "Seedling blight"], ["Rice", "Brown Spot", "Transplanting", 5, "Leaf spots"], ["Rice", "Brown Spot", "Vegetative", 7, "Defoliation"], ["Rice", "Brown Spot", "Flowering", 8, "Grain spotting"], ["Rice", "Brown Spot", "Fruiting", 7, "Yield loss"], ["Rice", "Brown Spot", "Maturity", 5, "Reduced severity"], ["Rice", "Brown Spot", "Harvesting", 3, "Market value"], ["Rice", "Bacterial blight of Rice", "Pre Sowing", 5, "Seed infection"], ["Rice", "Bacterial blight of Rice", "Germination", 7, "Seedling wilt"], ["Rice", "Bacterial blight of Rice", "Transplanting", 8, "Water spread"], ["Rice", "Bacterial blight of Rice", "Vegetative", 9, "Leaf blight"], ["Rice", "Bacterial blight of Rice", "Flowering", 10, "Panicle blight"], ["Rice", "Bacterial blight of Rice", "Fruiting", 10, "Grain loss"], ["Rice", "Bacterial blight of Rice", "Maturity", 8, "Yield reduction"], ["Rice", "Bacterial blight of Rice", "Harvesting", 6, "Quality issues"], ["Rice", "Tungro virus", "Pre Sowing", 1, "Vector dependent"], ["Rice", "Tungro virus", "Germination", 3, "Early infection"], ["Rice", "Tungro virus", "Transplanting", 5, "Moderate spread"], ["Rice", "Tungro virus", "Vegetative", 7, "Stunting"], ["Rice", "Tungro virus", "Flowering", 9, "Reduced panicles"], ["Rice", "Tungro virus", "Fruiting", 8, "Poor grain filling"], ["Rice", "Tungro virus", "Maturity", 6, "Yield loss"], ["Rice", "Tungro virus", "Harvesting", 4, "Quality only"], ["Mango-Dussehri", "Anthracnose", "Pre Sowing", 2, "Latent infection"], ["Mango-Dussehri", "Anthracnose", "Germination", 0, "Not applicable"], ["Mango-Dussehri", "Anthracnose", "Transplanting", 3, "Leaf spots"], ["Mango-Dussehri", "Anthracnose", "Vegetative", 5, "Twig blight"], ["Mango-Dussehri", "Anthracnose", "Flowering", 8, "Flower blight"], ["Mango-Dussehri", "Anthracnose", "Fruiting", 9, "Fruit rot"], ["Mango-Dussehri", "Anthracnose", "Maturity", 7, "Post-harvest rot"], ["Mango-Dussehri", "Anthracnose", "Harvesting", 6, "Market loss"], ["Mango-Dussehri", "Powdery mildew", "Pre Sowing", 1, "Spore carryover"], ["Mango-Dussehri", "Powdery mildew", "Germination", 0, "Not applicable"], ["Mango-Dussehri", "Powdery mildew", "Transplanting", 2, "Leaf infection"], ["Mango-Dussehri", "Powdery mildew", "Vegetative", 4, "Moderate impact"], ["Mango-Dussehri", "Powdery mildew", "Flowering", 7, "Flower infection"], ["Mango-Dussehri", "Powdery mildew", "Fruiting", 6, "Fruit coating"], ["Mango-Dussehri", "Powdery mildew", "Maturity", 3, "Minimal effect"], ["Mango-Dussehri", "Powdery mildew", "Harvesting", 2, "Appearance only"], ["Mango-Dussehri", "Bacterial canker", "Pre Sowing", 3, "Bark infection"], ["Mango-Dussehri", "Bacterial canker", "Germination", 0, "Not applicable"], ["Mango-Dussehri", "Bacterial canker", "Transplanting", 5, "Twig dieback"], ["Mango-Dussehri", "Bacterial canker", "Vegetative", 7, "Branch death"], ["Mango-Dussehri", "Bacterial canker", "Flowering", 6, "Flower drop"], ["Mango-Dussehri", "Bacterial canker", "Fruiting", 8, "Fruit lesions"], ["Mango-Dussehri", "Bacterial canker", "Maturity", 6, "Tree decline"], ["Mango-Dussehri", "Bacterial canker", "Harvesting", 4, "Quality impact"], ["Mango-Dussehri", "Stem end rot", "Pre Sowing", 1, "Latent infection"], ["Mango-Dussehri", "Stem end rot", "Germination", 0, "Not applicable"], ["Mango-Dussehri", "Stem end rot", "Transplanting", 2, "Minor impact"], ["Mango-Dussehri", "Stem end rot", "Vegetative", 3, "Twig infection"], ["Mango-Dussehri", "Stem end rot", "Flowering", 4, "Flower base"], ["Mango-Dussehri", "Stem end rot", "Fruiting", 7, "Fruit infection"], ["Mango-Dussehri", "Stem end rot", "Maturity", 9, "Post-harvest rot"], ["Mango-Dussehri", "Stem end rot", "Harvesting", 8, "Storage loss"], ["Mango-Dussehri", "Malformation", "Pre Sowing", 2, "Unknown cause"], ["Mango-Dussehri", "Malformation", "Germination", 0, "Not applicable"], ["Mango-Dussehri", "Malformation", "Transplanting", 4, "Vegetative form"], ["Mango-Dussehri", "Malformation", "Vegetative", 6, "Bunched growth"], ["Mango-Dussehri", "Malformation", "Flowering", 8, "Floral malformation"], ["Mango-Dussehri", "Malformation", "Fruiting", 10, "No fruit set"], ["Mango-Dussehri", "Malformation", "Maturity", 3, "Tree health"], ["Mango-Dussehri", "Malformation", "Harvesting", 1, "Cleanup needed"]]};
+  const KB = {"sev": {"Leaf rust": [8.0, "High threat"], "Powdery mildew": [5.0, "Medium threat"], "Root rot": [6.0, "Medium threat"], "Leaf curl": [9.0, "High threat"], "Boll rot": [7.0, "High threat"], "Wilt": [5.0, "Medium threat"], "Blast": [9.0, "High threat"], "Sheath blight": [6.0, "Medium threat"], "Brown spot": [4.0, "Low threat"], "Late blight": [9.0, "High threat"], "Early blight": [6.0, "Medium threat"], "Scab": [3.0, "Low threat"]}, "stage": {"Sowing": 3.0, "Germination": 5.0, "Vegetative": 5.0, "Flowering": 9.0, "Grain fill": 7.0, "Maturity": 2.0}, "map": [["Wheat", "Leaf rust", "Sowing", 5, "Little crop in the field yet"], ["Wheat", "Leaf rust", "Germination", 7, "Young plants are vulnerable"], ["Wheat", "Leaf rust", "Vegetative", 8, "Active growth, disease can spread"], ["Wheat", "Leaf rust", "Flowering", 10, "Yield is most at risk now"], ["Wheat", "Leaf rust", "Grain fill", 9, "Damage still cuts yield"], ["Wheat", "Leaf rust", "Maturity", 5, "Most of the yield is already set"], ["Wheat", "Powdery mildew", "Sowing", 2, "Little crop in the field yet"], ["Wheat", "Powdery mildew", "Germination", 4, "Young plants are vulnerable"], ["Wheat", "Powdery mildew", "Vegetative", 5, "Active growth, disease can spread"], ["Wheat", "Powdery mildew", "Flowering", 7, "Yield is most at risk now"], ["Wheat", "Powdery mildew", "Grain fill", 6, "Damage still cuts yield"], ["Wheat", "Powdery mildew", "Maturity", 2, "Most of the yield is already set"], ["Wheat", "Root rot", "Sowing", 3, "Little crop in the field yet"], ["Wheat", "Root rot", "Germination", 5, "Young plants are vulnerable"], ["Wheat", "Root rot", "Vegetative", 6, "Active growth, disease can spread"], ["Wheat", "Root rot", "Flowering", 8, "Yield is most at risk now"], ["Wheat", "Root rot", "Grain fill", 7, "Damage still cuts yield"], ["Wheat", "Root rot", "Maturity", 3, "Most of the yield is already set"], ["Cotton", "Leaf curl", "Sowing", 6, "Little crop in the field yet"], ["Cotton", "Leaf curl", "Germination", 8, "Young plants are vulnerable"], ["Cotton", "Leaf curl", "Vegetative", 9, "Active growth, disease can spread"], ["Cotton", "Leaf curl", "Flowering", 10, "Yield is most at risk now"], ["Cotton", "Leaf curl", "Grain fill", 10, "Damage still cuts yield"], ["Cotton", "Leaf curl", "Maturity", 6, "Most of the yield is already set"], ["Cotton", "Boll rot", "Sowing", 4, "Little crop in the field yet"], ["Cotton", "Boll rot", "Germination", 6, "Young plants are vulnerable"], ["Cotton", "Boll rot", "Vegetative", 7, "Active growth, disease can spread"], ["Cotton", "Boll rot", "Flowering", 9, "Yield is most at risk now"], ["Cotton", "Boll rot", "Grain fill", 8, "Damage still cuts yield"], ["Cotton", "Boll rot", "Maturity", 4, "Most of the yield is already set"], ["Cotton", "Wilt", "Sowing", 2, "Little crop in the field yet"], ["Cotton", "Wilt", "Germination", 4, "Young plants are vulnerable"], ["Cotton", "Wilt", "Vegetative", 5, "Active growth, disease can spread"], ["Cotton", "Wilt", "Flowering", 7, "Yield is most at risk now"], ["Cotton", "Wilt", "Grain fill", 6, "Damage still cuts yield"], ["Cotton", "Wilt", "Maturity", 2, "Most of the yield is already set"], ["Rice", "Blast", "Sowing", 6, "Little crop in the field yet"], ["Rice", "Blast", "Germination", 8, "Young plants are vulnerable"], ["Rice", "Blast", "Vegetative", 9, "Active growth, disease can spread"], ["Rice", "Blast", "Flowering", 10, "Yield is most at risk now"], ["Rice", "Blast", "Grain fill", 10, "Damage still cuts yield"], ["Rice", "Blast", "Maturity", 6, "Most of the yield is already set"], ["Rice", "Sheath blight", "Sowing", 3, "Little crop in the field yet"], ["Rice", "Sheath blight", "Germination", 5, "Young plants are vulnerable"], ["Rice", "Sheath blight", "Vegetative", 6, "Active growth, disease can spread"], ["Rice", "Sheath blight", "Flowering", 8, "Yield is most at risk now"], ["Rice", "Sheath blight", "Grain fill", 7, "Damage still cuts yield"], ["Rice", "Sheath blight", "Maturity", 3, "Most of the yield is already set"], ["Rice", "Brown spot", "Sowing", 1, "Little crop in the field yet"], ["Rice", "Brown spot", "Germination", 3, "Young plants are vulnerable"], ["Rice", "Brown spot", "Vegetative", 4, "Active growth, disease can spread"], ["Rice", "Brown spot", "Flowering", 6, "Yield is most at risk now"], ["Rice", "Brown spot", "Grain fill", 5, "Damage still cuts yield"], ["Rice", "Brown spot", "Maturity", 1, "Most of the yield is already set"], ["Potato", "Late blight", "Sowing", 6, "Little crop in the field yet"], ["Potato", "Late blight", "Germination", 8, "Young plants are vulnerable"], ["Potato", "Late blight", "Vegetative", 9, "Active growth, disease can spread"], ["Potato", "Late blight", "Flowering", 10, "Yield is most at risk now"], ["Potato", "Late blight", "Grain fill", 10, "Damage still cuts yield"], ["Potato", "Late blight", "Maturity", 6, "Most of the yield is already set"], ["Potato", "Early blight", "Sowing", 3, "Little crop in the field yet"], ["Potato", "Early blight", "Germination", 5, "Young plants are vulnerable"], ["Potato", "Early blight", "Vegetative", 6, "Active growth, disease can spread"], ["Potato", "Early blight", "Flowering", 8, "Yield is most at risk now"], ["Potato", "Early blight", "Grain fill", 7, "Damage still cuts yield"], ["Potato", "Early blight", "Maturity", 3, "Most of the yield is already set"], ["Potato", "Scab", "Sowing", 1, "Little crop in the field yet"], ["Potato", "Scab", "Germination", 2, "Young plants are vulnerable"], ["Potato", "Scab", "Vegetative", 3, "Active growth, disease can spread"], ["Potato", "Scab", "Flowering", 5, "Yield is most at risk now"], ["Potato", "Scab", "Grain fill", 4, "Damage still cuts yield"], ["Potato", "Scab", "Maturity", 1, "Most of the yield is already set"]]}; // fictional dummy data for the demo
   const crops = [...new Set(KB.map.map(r => r[0]))];
   const st8 = { crop: crops[0], dis: null, stage: null, age: 10, max: 20, min: 12, rain: 0, cloud: 50 };
   const cropBox = $('#uCrop'), disSel = $('#uDis'), stSel = $('#uStage');
@@ -1985,20 +1988,13 @@ html.sw-menu-open .sw-prog{opacity:0!important}
   });
 
   function weatherScore(w){
-    // identical rules to calculate_dynamic_weather_contextual, using its default location norms
-    const T = { p95: 30, p75: 25, med: 20, p25: 15, p5: 10 }, P = { p95: 20, p75: 5, med: 0 };
-    let s = 5; const avg = (w.max + w.min) / 2;
-    if (avg >= T.p95) s += 3; else if (avg >= T.p75) s += 1.5; else if (avg <= T.p5) s += 3; else if (avg <= T.p25) s += 1.5;
-    if (w.max > 40) s += 2; if (w.min < 0) s += 2;
-    if (w.rain >= P.p95) s += 3; else if (w.rain >= P.p75) s += 2; else if (w.rain > P.med) s += 1;
-    if (w.rain > 50) s += 1;
-    if (w.cloud > 80) s += 1; else if (w.cloud < 20) s += .5;
-    if (w.max - w.min > 15) s += 1;
-    if (Math.abs(avg - T.med) > 5) s += 1;
-    if (Math.abs(w.rain - P.med) > P.med * 2) s += 1;
+    // simplified dummy scoring for the demo: distance from a mild, dry, partly cloudy day
+    const avg = (w.max + w.min) / 2;
+    let s = 4 + Math.min(3, Math.abs(avg - 18) / 5) + Math.min(2.5, w.rain / 20) + (w.cloud > 85 ? 1 : 0) + ((w.max - w.min) > 18 ? .5 : 0);
     return Math.max(1, Math.min(10, s));
   }
-  const PARTS = [['Disease severity', .40, 'var(--pink)'], ['Growth stage', .25, 'var(--violet)'], ['Crop × disease × stage', .15, 'var(--cyan)'], ['Case freshness', .10, 'var(--amber)'], ['Weather anomaly', .10, 'var(--green)']];
+
+  const PARTS = [['Disease severity', .35, 'var(--pink)'], ['Growth stage', .25, 'var(--violet)'], ['Crop × disease × stage', .20, 'var(--cyan)'], ['Case freshness', .10, 'var(--amber)'], ['Weather anomaly', .10, 'var(--green)']]; // dummy weights
   let shown = 0;
   function compute(){
     if (st8.min > st8.max) { st8.min = st8.max; sl.min.value = st8.max; }
@@ -2008,7 +2004,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
     const v = [sevE ? sevE[0] : 5, KB.stage[st8.stage] ?? 5, row ? row[3] : 4, st8.age, weatherScore(st8)];
     const contrib = v.map((x, i) => x * PARTS[i][1]);
     const u = contrib.reduce((a, b) => a + b, 0);
-    const band = u >= 6.5 ? 'CRITICAL' : u >= 4 ? 'HIGH' : 'MEDIUM';
+    const band = u >= 7 ? 'CRITICAL' : u >= 4.5 ? 'HIGH' : 'MEDIUM';
     $('#uWhy').innerHTML = `<b>${st8.dis}</b>${sevE ? ' · ' + sevE[1] : ''} at <b>${st8.stage}</b> — ${row ? row[4] : ''}`;
     $('#gArc').setAttribute('stroke-dasharray', `${u * 10} 100`);
     $('#gNeedle').style.transform = `rotate(${-90 + u * 18}deg)`;
@@ -2018,7 +2014,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
     $('#uBar').innerHTML = contrib.map((c, i) => `<i style="width:${c * 10}%;background:${PARTS[i][2]}"></i>`).join('');
     $('#uRows').innerHTML = PARTS.map((p, i) => `<div class="c-row"><i style="background:${p[2]}"></i><span>${p[0]}</span><em>${v[i].toFixed(1)} × ${Math.round(p[1] * 100)}%</em><b>+${contrib[i].toFixed(2)}</b></div>`).join('');
     const crop = st8.crop.replace('-Dussehri', '').toLowerCase();
-    let msg = `${band === 'CRITICAL' ? '<span class="u">URGENT!</span> ' : ''}${st8.dis} risk on your ${crop}. Treat now: <span class="l">bkk.ag/p/123</span> Regards, BaKhabar Kissan Team`;
+    let msg = `${band === 'CRITICAL' ? '<span class="u">URGENT!</span> ' : ''}${st8.dis} risk on your ${crop}. Treat now: <span class="l">link.example/p/123</span> Regards, Agri Advisory Team`;
     const plain = msg.replace(/<[^>]+>/g, '');
     if (plain.length > 150) msg = msg.replace(` risk on your ${crop}`, '');
     $('#uSms').innerHTML = msg;
@@ -2029,7 +2025,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
   const wio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); wio.disconnect(); } }), { threshold: .5 });
   wio.observe($('.w-strip'));
 
-  /* ---------- portal mockup (all figures are illustrative sample data unless marked real) ---------- */
+  /* ---------- portal mockup (all figures are dummy data) ---------- */
   const G = { green:'#16a34a', lime:'#84cc16', teal:'#0d9488', amber:'#f59e0b', orange:'#ea580c', red:'#dc2626', blue:'#2563eb', violet:'#7c3aed', slate:'#64748b' };
   const kpi = (l, v, d, c, real) => `<div class="pc kpi2"><h5>${l}</h5><b>${v}${real ? '<span class="real">real</span>' : ''}</b><small class="${c}">${d}</small></div>`;
   const hbars = (rows, max) => `<div class="hbars">${rows.map(r => `<div class="hb"><span>${r[0]}</span><div class="t"><i data-w="${r[1] / max * 100}" style="background:${r[3] || G.green}"></i></div><b>${r[2]}</b></div>`).join('')}</div>`;
@@ -2083,7 +2079,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
 
   const VIEWS = {
     overview: { t: 'Overview', s: 'Farmer base at a glance', h: () =>
-      kpi('Registered farmers', '390K+', 'across all regions', 'n', 1) + kpi('Data sources', '5', 'combined in the pipeline', 'n', 1) + kpi('Dashboards', '11', 'in production', 'n', 1) + kpi('Active this month', '62.4K', '▲ 4.1% vs last month', 'g') +
+      kpi('Registered farmers', '128.4K', 'across all regions', 'n') + kpi('Avg. session', '6m 12s', '▲ 38s vs last month', 'g') + kpi('Dashboard views', '41.2K', 'this month', 'n') + kpi('Active this month', '62.4K', '▲ 4.1% vs last month', 'g') +
       `<div class="pc span3"><h5>New farmer registrations <em>monthly</em></h5>${area([14, 18, 17, 22, 26, 24, 29, 33, 31, 36, 41, 45], months, '#16a34a')}</div>` +
       `<div class="pc"><h5>By province</h5>${donut([['Punjab', 58, G.green], ['Sindh', 22, G.amber], ['KP', 14, G.blue], ['Balochistan', 6, G.violet]])}</div>` +
       `<div class="pc span2"><h5>Primary crop of farmers</h5>${hbars([['Wheat', 41, '41%', '#d4a017'], ['Cotton', 18, '18%', '#60a5fa'], ['Rice', 15, '15%', G.green], ['Sugarcane', 12, '12%', '#a855f7'], ['Maize', 8, '8%', G.orange]], 45)}</div>` +
@@ -2141,38 +2137,38 @@ html.sw-menu-open .sw-prog{opacity:0!important}
   pv.innerHTML = VIEWS.overview.h();
 
   /* ---------- competitor-analysis workbench (illustrative, anonymised) ---------- */
-  const PIL = [['Content', 'var(--pink)'], ['Pricing', 'var(--amber)'], ['Distribution', 'var(--cyan)'], ['Product', 'var(--violet)'], ['Marketing', 'var(--green)']];
+  const PIL = [['Offering', 'var(--pink)'], ['Pricing', 'var(--amber)'], ['Distribution', 'var(--cyan)'], ['Product', 'var(--violet)'], ['Marketing', 'var(--green)']];
   const MOVES = [
-    // pillar, name, quarter, intent(0-10), execution(0-10), note
-    [0, 'Local-language originals', 'Q1', 8, 7.2, 'Heavy push on regional originals to win share of viewing time'],
-    [0, 'Live sports rights', 'Q3', 7.4, 3, 'Expensive rights deal, but streaming quality and scheduling were weak at launch'],
-    [1, 'Mobile-only entry plan', 'Q2', 8.6, 8.1, 'Low-price mobile tier that removed the price barrier for first-time subscribers'],
-    [1, 'Ad-supported free tier', 'Q4', 1.8, 3, 'Free tier announced, but thin inventory and a poor ad experience'],
-    [2, 'Telco bundle partnerships', 'Q1', 9.3, 9, 'Bundled into telco plans for reach at low acquisition cost'],
-    [3, 'Local wallet payments', 'Q2', 6.5, 8.5, 'Cut payment friction for users without cards'],
-    [3, 'Personalised home screen', 'Q3', 3.8, 5.8, 'Recommendation-led UI rolled out in stages'],
-    [4, 'Influencer-led launches', 'Q2', 2.8, 7.5, 'Social-first campaigns around title launches'],
+    // pillar, name, phase, intent(0-10), execution(0-10), note
+    [0, 'Private-label range', 'Phase 1', 8, 7.2, 'Launched own-brand products to lift margins and loyalty'],
+    [0, 'Premium category push', 'Phase 3', 7.4, 3, 'Costly move into premium categories, but thin supplier depth at launch'],
+    [1, 'Value pricing tier', 'Phase 2', 8.6, 8.1, 'Cut prices on everyday items to win first-time buyers'],
+    [1, 'Instalment payments trial', 'Phase 4', 1.8, 3, 'Trialled pay-later options with low uptake and a clunky flow'],
+    [2, 'Distribution partnerships', 'Phase 1', 9.3, 9, 'Partnered with third parties for reach at low acquisition cost'],
+    [3, 'Checkout simplification', 'Phase 2', 6.5, 8.5, 'Reduced payment friction for new customers'],
+    [3, 'Personalisation rollout', 'Phase 3', 3.8, 5.8, 'Rolled out a more personalised experience in stages'],
+    [4, 'Social-led launches', 'Phase 2', 2.8, 7.5, 'Social-first campaigns around major launches'],
   ];
-  const DIMS = ['Content', 'Pricing', 'Distribution', 'Product', 'Marketing'];
-  const US = [78, 55, 64, 72, 60], THEM = [70, 80, 82, 66, 74];
+  const DIMS = ['Offering', 'Pricing', 'Distribution', 'Product', 'Marketing'];
+  const US = [74, 62, 66, 70, 64], THEM = [68, 72, 74, 66, 70];
   const RECS = [
-    ['p1', 'Launch a mobile-first entry plan', 'High', 'Med', "Competitor X's low-price mobile tier was strong in both strategy and execution, and it is the biggest pricing gap in the benchmark.", 'Steps 2 & 3 · pricing gap −25'],
-    ['p1', 'Defend and expand telco bundles', 'High', 'Low', 'Their bundles drive reach at low cost. Securing renewals and exclusive bundle terms protects our share.', 'Steps 1 & 3 · distribution gap −18'],
-    ['p2', 'Lean into our content advantage', 'Med', 'Med', 'Content is where we lead. Market it harder instead of matching their sports spend, where their execution was weak.', 'Step 2 · sports in the "Opportunity window" quadrant'],
-    ['p2', 'Add local wallet payments', 'Med', 'Low', 'Cheap to do and removes the checkout friction they already solved.', 'Step 1 · product move'],
-    ['p3', 'Monitor their ad-supported tier', 'Low', 'Low', 'Low importance and weak execution so far. Set KPI triggers and revisit each quarter rather than reacting now.', 'Step 2 · "Ignore" quadrant, for now'],
+    ['p1', 'Respond to the value pricing tier', 'High', 'Med', "Competitor B's value pricing tier was strong in both strategy and execution, and pricing is Company A's biggest gap in the benchmark.", 'Steps 2 & 3 · pricing gap −10'],
+    ['p1', 'Strengthen distribution partnerships', 'High', 'Low', 'Competitor B\'s partnerships drive reach at low cost. Securing and deepening partnerships protects Company A\'s share.', 'Steps 1 & 3 · distribution gap −8'],
+    ['p2', 'Lean into the range advantage', 'Med', 'Med', 'Offering is where Company A leads. Market it harder instead of matching Competitor B\'s premium push, where its execution was weak.', 'Step 2 · premium push in the "Opportunity window" quadrant'],
+    ['p2', 'Simplify checkout', 'Med', 'Low', 'Cheap to do and removes payment friction that Competitor B has already reduced.', 'Step 1 · product move'],
+    ['p3', 'Monitor the instalment trial', 'Low', 'Low', 'Low importance and weak execution so far. Set KPI triggers and revisit each quarter rather than reacting now.', 'Step 2 · "Ignore" quadrant, for now'],
   ];
   const STEPS = [
-    ['Map the strategy', "Competitor X's moves over 12 months, grouped by strategic pillar"],
+    ['Map the strategy', "Competitor B's moves across four phases, grouped by strategic pillar"],
     ['Assess the execution', 'How important each move was compared with how well it was executed'],
-    ['Benchmark & find gaps', 'Indexed scores by dimension (0–100) for us and Competitor X'],
+    ['Benchmark & find gaps', 'Indexed scores by dimension (0–100) for Company A and Competitor B'],
     ['Recommend', 'Prioritised actions, each traced back to evidence'],
   ];
   const ciBody = $('#ciBody'), ciFoot = $('#ciFoot'), stepEls = $$('#case .step');
   let ciStep = 0, ciTimer = null, ciAuto = true, ciMode = 'both';
   const stepHtml = {
     0: () => `<div class="smap">${PIL.map((p, pi) => `<div class="scol"><h6>${p[0]}</h6>${MOVES.map((m, mi) => [m, mi]).filter(([m]) => m[0] === pi).map(([m, mi], k) => `<button class="mv" data-m="${mi}" style="--c:${p[1]};animation-delay:${(pi * 2 + k) * .07}s">${m[1]}<small>${m[2]}</small></button>`).join('')}</div>`).join('')}</div>
-      <div class="ci-tl">${['Q1', 'Q2', 'Q3', 'Q4'].map((q, i) => `<span style="left:${12 + i * 25.3}%;--c:${['var(--cyan)', 'var(--violet)', 'var(--pink)', 'var(--amber)'][i]}"><i></i>${q}<br>${MOVES.filter(m => m[2] === q).length} moves</span>`).join('')}</div>`,
+      <div class="ci-tl">${['Phase 1', 'Phase 2', 'Phase 3', 'Phase 4'].map((q, i) => `<span style="left:${12 + i * 25.3}%;--c:${['var(--cyan)', 'var(--violet)', 'var(--pink)', 'var(--amber)'][i]}"><i></i>${q}<br>${MOVES.filter(m => m[2] === q).length} moves</span>`).join('')}</div>`,
     1: () => {
       const X = v => 40 + v / 10 * 340, Y = v => 312 - v / 10 * 264;
       return `<div class="mx"><svg viewBox="0 0 400 360">
@@ -2191,19 +2187,19 @@ html.sw-menu-open .sw-prog{opacity:0!important}
       const P = vals => vals.map((v, i) => `${(C + Math.cos(ang(i)) * R * v / 100).toFixed(1)},${(C + Math.sin(ang(i)) * R * v / 100).toFixed(1)}`).join(' ');
       const rings = [.25, .5, .75, 1].map(f => `<polygon points="${P([1, 1, 1, 1, 1].map(() => f * 100))}" fill="none" stroke="rgba(255,255,255,.08)"/>`).join('');
       const zero = P([0, 0, 0, 0, 0]);
-      return `<div class="bm-tog" id="bmTog"><button data-m="both" class="on">Both</button><button data-m="us">Us</button><button data-m="them">Competitor X</button></div>
+      return `<div class="bm-tog" id="bmTog"><button data-m="both" class="on">Both</button><button data-m="us">Company A</button><button data-m="them">Competitor B</button></div>
       <div class="bm"><svg viewBox="0 0 300 300">${rings}${DIMS.map((d, i) => `<line x1="${C}" y1="${C}" x2="${C + Math.cos(ang(i)) * R}" y2="${C + Math.sin(ang(i)) * R}" stroke="rgba(255,255,255,.08)"/><text x="${C + Math.cos(ang(i)) * (R + 18)}" y="${C + Math.sin(ang(i)) * (R + 18) + 4}" text-anchor="middle">${d}</text>`).join('')}
         <polygon class="poly" id="pThem" points="${zero}" data-p="${P(THEM)}" fill="rgba(244,114,182,.18)" stroke="#f472b6" stroke-width="2"/>
         <polygon class="poly" id="pUs" points="${zero}" data-p="${P(US)}" fill="rgba(34,211,238,.2)" stroke="#22d3ee" stroke-width="2.5"/></svg>
-        <div class="gap-rows">${DIMS.map((d, i) => { const g = US[i] - THEM[i]; return `<div class="gr"><div><span>${d}</span><b style="color:${g >= 0 ? '#34d399' : '#f87171'}">${g > 0 ? '+' : ''}${g}</b></div><div class="t"><i data-l="${g >= 0 ? 50 : 50 + g}" data-w="${Math.abs(g)}" style="left:50%;width:0;background:${g >= 0 ? '#34d399' : '#f87171'}"></i></div></div>`; }).join('')}<div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,monospace"><span>← they lead</span><span>we lead →</span></div></div></div>`;
+        <div class="gap-rows">${DIMS.map((d, i) => { const g = US[i] - THEM[i]; return `<div class="gr"><div><span>${d}</span><b style="color:${g >= 0 ? '#34d399' : '#f87171'}">${g > 0 ? '+' : ''}${g}</b></div><div class="t"><i data-l="${g >= 0 ? 50 : 50 + g}" data-w="${Math.abs(g)}" style="left:50%;width:0;background:${g >= 0 ? '#34d399' : '#f87171'}"></i></div></div>`; }).join('')}<div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,monospace"><span>← Competitor B leads</span><span>Company A leads →</span></div></div></div>`;
     },
     3: () => `<div class="recs">${RECS.map((r, i) => `<div class="rc${i === 0 ? ' open' : ''}" style="animation-delay:${i * .09}s"><button><span class="p ${r[0]}">${r[0].toUpperCase()}</span><h6>${r[1]}</h6><span class="ie"><span>Impact ${r[2]}</span><span>Effort ${r[3]}</span></span></button><div class="more"><p>${r[4]}</p><p><b>Evidence:</b> ${r[5]}</p></div></div>`).join('')}</div>`
   };
   const foot = {
-    0: 'Click any move to see what Competitor X did. <b>8 moves</b> across <b>5 pillars</b>.',
+    0: 'Click any move to see what Competitor B did. <b>8 moves</b> across <b>5 pillars</b>.',
     1: 'Hover a dot. Top right = <b>real threat</b> (important and well executed). Top left = <b>opportunity window</b> (important but poorly executed).',
-    2: 'We lead on <b>content</b> and <b>product</b>. The biggest gaps are <b>pricing</b> (−25) and <b>distribution</b> (−18).',
-    3: 'Click a recommendation to see why. <b>2 × P1</b> actions went to management first.'
+    2: 'Company A leads on <b>offering</b> and <b>product</b>. Its biggest gaps are <b>pricing</b> (−10) and <b>distribution</b> (−8).',
+    3: 'Click a recommendation to see why. <b>2 × P1</b> actions come first.'
   };
   function ciShow(n, user){
     ciStep = n;
@@ -2293,7 +2289,7 @@ html.sw-menu-open .sw-prog{opacity:0!important}
     const SPEED = .42; // autoplay speed: share of the screen height per second
     let DUR = 40; // real runtime in seconds, recalculated from page length
     const fmt = s => `${pad(Math.floor(s / 60))}:${pad(Math.floor(s % 60))}`;
-    const CH = [['home', 'Intro'], ['case', 'Case Study'], ['deepdive', 'AI Agent'], ['urgency', 'Urgency Engine'], ['portal', 'Portal'], ['projects', 'Projects'], ['experience', 'Experience'], ['skills', 'Toolkit'], ['education', 'Education'], ['writing', 'Writing'], ['contact', 'Contact']];
+    const CH = [['home', 'Intro'], ['deepdive', 'AI Agent'], ['urgency', 'Urgency Engine'], ['portal', 'Portal'], ['case', 'Framework'], ['projects', 'Projects'], ['experience', 'Experience'], ['skills', 'Toolkit'], ['education', 'Education'], ['writing', 'Writing'], ['contact', 'Contact']];
     let pos = [], maxS = 1, seen = 0, playing = false, raf = 0, acc = 0;
     function layout(){
       maxS = Math.max(1, document.documentElement.scrollHeight - innerHeight);
